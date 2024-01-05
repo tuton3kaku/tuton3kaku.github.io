@@ -77,6 +77,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* ============================
+  // Smooth scrolling to section
+  ============================ */
+  document.querySelectorAll(".works-button").forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
+
+
+  /* ============================
   // Testimonials Slider
   ============================ */
   if (document.querySelector(".my-slider")) {

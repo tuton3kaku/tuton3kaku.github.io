@@ -1,4 +1,6 @@
-title: Vonge
+title: Blend
+
+url: https://blend-rcjj.github.io
 
 plugins:
   - jekyll-bookshop
@@ -10,7 +12,7 @@ plugins:
 # Multiple bookshops can be used on one website,
 # or different production / staging locations.
 bookshop_locations:
-  - ../components
+  - ./components
 
 exclude:
   - postcss.config.js
@@ -31,14 +33,11 @@ collections:
   pages:
     output: true
     permalink: /:title/
-  projects:
-    output: true
-    permalink: /project/:slug
   testimonials:
     output: false
   posts:
     output: true
-    permalink: /blog/:slug
+    permalink: /:year:month:day/
 
 cloudcannon:
   collections:
@@ -91,3 +90,28 @@ defaults:
 tag_page_dir: tag
 tag_page_layout: tag_page
 tag_permalink_style: /:title
+
+twitter:
+  username: robokichi41
+
+authors:
+  shirokuma-89:
+    name: shirokuma-89
+    display_name: しろくま＠胡瓜
+    avatar: 'images/shirokuma-89.jpg'
+  poncho:
+    name: poncho
+    display_name: ぽんちょ
+    avatar: 'images/poncho.jpg'
+  rumbabo:
+    name: rumbabo
+    display_name: ルンバボー
+    avatar: 'images/rumbabo.jpg'  
+  setuka:
+    name: setuka
+    display_name: setuka
+    avatar: 'images/setuka.jpg'
+  onagi:
+    name: onagi
+    display_name: お餅にゃむにゃむ
+    avatar: 'images/onagi.jpg'

@@ -7,8 +7,11 @@
     "bookshop-live": "bookshop-live -b ./components -o site/_cloudcannon/bookshop-live.js",
     "jekyll": "BUNDLE_GEMFILE=site/Gemfile bundle exec jekyll serve --source site --port 6060 --trace --unpublished",
     "start": "run-p bookshop-dev jekyll",
-    "install-jekyll": "BUNDLE_GEMFILE=site/Gemfile bundle install"
+    "install-jekyll": "BUNDLE_GEMFILE=site/Gemfile bundle install",
+    "deploy": "npm run build && gh-pages -d _site",
+    "build": "bundle exec jekyll build"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bglw/bookshop-example.git"
@@ -23,6 +26,7 @@
     "@bookshop/browser": "^2.2.2",
     "@bookshop/jekyll-engine": "^2.2.2",
     "@bookshop/live": "^2.2.2",
+    "gh-pages": "^4.0.0",
     "npm-run-all": "^4.1.5"
   }
 }
