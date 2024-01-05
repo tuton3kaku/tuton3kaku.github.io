@@ -92,7 +92,7 @@ tag_page_layout: tag_page
 tag_permalink_style: /:title
 
 twitter:
-  username: robokichi41
+  username: tuton3kaku
 
 authors:
   shirokuma-89:
@@ -103,15 +103,3 @@ authors:
     name: poncho
     display_name: ぽんちょ
     avatar: 'images/poncho.jpg'
-  rumbabo:
-    name: rumbabo
-    display_name: ルンバボー
-    avatar: 'images/rumbabo.jpg'  
-  setuka:
-    name: setuka
-    display_name: setuka
-    avatar: 'images/setuka.jpg'
-  onagi:
-    name: onagi
-    display_name: お餅にゃむにゃむ
-    avatar: 'images/onagi.jpg'
