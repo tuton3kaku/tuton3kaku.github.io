@@ -1,0 +1,105 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.url == "/" %}{{ site.data.general_settings.title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.data.general_settings.title }}{% endif %}</title>
+  <meta name='description' content='{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.data.general_settings.description }}{% endif %}'>
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.url == "/" %}{{ site.data.general_settings.title }}{% else %}{{ page.title }} – {{ site.data.general_settings.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.url == "/" %}{{ site.data.general_settings.description | strip_html | xml_escape }}{% elsif page.description %}{{ page.description | strip_html | xml_escape }}{% else %}{{ page.excerpt | strip_html | xml_escape }}{% endif %}">
+  <meta name="twitter:image" content="{% if page.url == "/" %}{{ site.data.general_settings.social_media_share_image | absolute_url }}{% else %}{{ page.image | absolute_url }}{% endif %}">
+
+  <!-- Facebook OpenGraph -->
+  <meta property="og:title" content="{% if page.url == "/" %}{{ site.data.general_settings.title }}{% else %}{{ page.title }} – {{ site.data.general_settings.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.url == "/" %}{{ site.data.general_settings.description | strip_html | xml_escape }}{% elsif page.description %}{{ page.description | strip_html | xml_escape }}{% else %}{{ page.excerpt | strip_html | xml_escape }}{% endif %}">
+  <meta property="og:image" content="{% if page.url == "/" %}{{ site.data.general_settings.social_media_share_image | absolute_url }}{% else %}{{ page.image | absolute_url }}{% endif %}">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+  <!-- Ionicons -->
+  <link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  
+  <style>
+  .bcard-wrapper{
+      display: block;
+      width: 100%;
+      /* max-width: 500px; */
+      margin: 10px 0px;
+      border-radius: 3px;
+      padding: 12px;
+      border: 1px solid #e0e0e0;
+  }
+  .bcard-site,.bcard-url{
+      font-size: 12px;
+      line-height: 1.3;
+      overflow: hidden;
+      max-height: 15px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+  }
+  .bcard-header {
+      position: relative;
+      height: 30px;
+      margin-bottom: 5px;
+      display: block;
+  }
+  .withgfav{padding-left: 23px;}
+  .bcard-favicon {position: absolute;
+      top: 0px; left:0px; width:16px; height:16px;}
+  .bcard-main{
+      overflow: hidden;
+      position: relative;
+      display: block;
+  }
+  .withogimg{
+      padding-right: 110px;
+      height: 100px;
+  }
+   .bcard-img {
+  width: 100px;
+  height: 100px; 
+  position: absolute;
+      top: 0;
+      right: 0;
+      background-size:cover;
+      background-position:center center;
+  }
+   .bcard-title{
+      font-size: 17px;
+      margin: 0 0 2px;
+      line-height: 1.4;
+      max-height: 47px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      font-weight: bold;
+  }
+   .bcard-description {
+      line-height: 1.5;
+      font-size: 12px;
+      max-height: 72px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+  }
+  .bcard-title a{color:#424242;}
+  .bcard-url a{color:#9e9e9e;}
+  .bcard-title a:hover,.bcard-url a:hover,.bcard-site a:hover{text-decoration:underline;}
+  </style>
+</head>
